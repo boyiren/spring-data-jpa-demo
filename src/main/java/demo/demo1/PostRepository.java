@@ -1,5 +1,6 @@
 package demo.demo1;
 
+import demo.entity.Post;
 import org.springframework.data.repository.CrudRepository;
 
 /**

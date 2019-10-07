@@ -1,4 +1,4 @@
-package demo.demo1;
+package demo.entity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -24,17 +24,26 @@ public class Post {
     @Column(name = "title")
     private String title;
 
-    Post() {
+    @Column(name = "visits")
+    private Long visits;
+
+    public Post() {
 
     }
 
-    Post(Long id, String title) {
+    public Post(Long id, String title) {
         this.id = id;
         this.title = title;
     }
 
+    public Post(Long id, String title, Long visits) {
+        this.id = id;
+        this.title = title;
+        this.visits = visits;
+    }
+
     @Override
     public String toString() {
-        return String.format("Post(id=%d, title=%s)", this.id, this.title);
+        return String.format("Post(id=%d, title=%s, visits=%s)", this.id, this.title, this.visits);
     }
 }
